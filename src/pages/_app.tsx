@@ -1,11 +1,11 @@
 import { AppProps } from 'next/dist/next-server/lib/router/router';
 import Head from 'next/head';
-import { VFC } from 'react';
+import { NextPage } from 'next';
 
 import 'tailwindcss/tailwind.css';
 import 'src/styles/globals.css';
 
-const MyApp: VFC = ({ Component, pageProps }: AppProps) => {
+const MyApp: NextPage<AppProps> = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <Head>
