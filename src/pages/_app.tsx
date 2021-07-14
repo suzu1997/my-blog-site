@@ -9,7 +9,7 @@ const MyApp: NextPage<AppProps> = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <Head>
-        <title>Suzu&apos;s Blog</title>
+        <title>Suzu&apos;s Diary</title>
         <meta name='description' content='ブログサイトです。' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
