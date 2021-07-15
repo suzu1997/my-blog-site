@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { BlogList } from 'src/components/BlogList';
 
 import { Footer } from 'src/components/layout/Footer';
+import { SideBar } from 'src/components/SideBar';
 // import { Header } from 'src/components/layout/Header';
 
 const Home: NextPage = () => {
@@ -24,8 +25,10 @@ const Home: NextPage = () => {
             Suzu&apos;s diary
           </h1>
         </div>
-        <p className=''>indexページです。(ブログの一覧を表示)</p>
-        <BlogList />
+        <div className='flex justify-between mx-20'>
+          <BlogList />
+          <SideBar />
+        </div>
       </main>
       <Footer />
     </div>
