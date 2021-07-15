@@ -9,6 +9,9 @@ module.exports = {
       colors: {
         violet: colors.violet,
       },
+      gridTemplateColumns: {
+        blogs: 'repeat(auto-fill, minmax(250px, 1fr))',
+      },
     },
   },
   variants: {
