@@ -5,6 +5,10 @@ import { NextPage } from 'next';
 import 'tailwindcss/tailwind.css';
 import 'src/styles/globals.css';
 
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import { config } from '@fortawesome/fontawesome-svg-core';
+config.autoAddCss = false; 
+
 const MyApp: NextPage<AppProps> = ({ Component, pageProps }: AppProps) => {
   return (
     <>
