@@ -3,7 +3,7 @@ import { VFC } from 'react';
 
 export const BlogItem: VFC = () => {
   return (
-    <div className='text-center border border-violet-200 rounded-lg shadow-md hover:shadow-xl hover:opacity-90'>
+    <div className='text-center rounded-lg shadow-md hover:shadow-xl hover:opacity-90'>
       <Image src='/portfolio-site.jpg' alt='アイキャッチ画像' width={300} height={180} className=''/>
       <div>
         <div className='text-gray-400'>🗓20xx.x.x  🏷ポートフォリオ</div>

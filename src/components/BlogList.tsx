@@ -3,8 +3,7 @@ import { BlogItem } from './BlogItem';
 
 export const BlogList: VFC = () => {
   return (
-    <div className='text-center w-10/12 md:w-3/4 grid grid-cols-blogs gap-12'>
-      <BlogItem />
+    <div className='text-center w-10/12 md:w-3/4 grid grid-cols-blogs gap-10 justify-center'>
       <BlogItem />
       <BlogItem />
       <BlogItem />
