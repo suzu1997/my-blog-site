@@ -9,19 +9,20 @@ import { Header } from 'src/components/layout/Header';
 
 const Home: NextPage = () => {
   return (
-    <div className='min-h-screen p-0 flex flex-col items-center'>
+    <div className='min-h-screen p-0 flex flex-col items-center font-serif'>
       <Header />
       <main className='flex-grow min-h-full'>
         <div className='w-screen h-80 relative'>
-          <div className='opacity-70'>
+          <div>
             <Image
               src='/top2.jpg'
               alt='ルーマニアの街並み'
               layout='fill'
               objectFit='cover'
-            ></Image>
+              className='opacity-70'
+            />
           </div>
-          <h1 className='absolute top-2/3 left-5 sm:left-20 text-purple-700 text-5xl md:text-6xl lg:text-7xl font-bold font-serif mix-blend-overlay block'>
+          <h1 className='absolute top-2/3 left-5 sm:left-20 text-purple-700 text-5xl md:text-6xl lg:text-7xl font-bold font-lobster tracking-wide mix-blend-overlay block'>
             Suzu&apos;s diary
           </h1>
         </div>
