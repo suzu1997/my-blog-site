@@ -26,9 +26,10 @@
     "semi": [2, "always"],
     "no-extra-semi": "warn",
     "no-undef": "warn",
-    "quotes": ["warn", "single"] ,
+    "quotes": ["warn", "single"],
     "space-before-blocks": ["warn", { "functions": "always" }],
     "react/prop-types": "off",
-    "react/display-name": "off"
+    "react/display-name": "off",
+    "@typescript-eslint/no-explicit-any": "off"
   }
 }
