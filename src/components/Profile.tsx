@@ -23,7 +23,7 @@ export const Profile: VFC = () => {
               rel='noreferrer'
               className='mr-1 hover:opacity-70'
             >
-              <FontAwesomeIcon icon={faTwitter} size='2x' />
+              <FontAwesomeIcon icon={faTwitter} size='lg' />
             </a>
             <a
               href='https://github.com/suzu1997'
@@ -31,7 +31,7 @@ export const Profile: VFC = () => {
               rel='noreferrer'
               className='hover:opacity-70'
             >
-              <FontAwesomeIcon icon={faGithub} size='2x' />
+              <FontAwesomeIcon icon={faGithub} size='lg' />
             </a>
           </div>
           <p className='text-sm text-gray-500'>
