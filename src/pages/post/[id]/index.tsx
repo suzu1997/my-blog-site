@@ -11,7 +11,7 @@ const PostId: NextPage = () => {
       <div>ブログの子ページ</div>
       <div>{router.query.id}</div>
       <button
-        className='border border-gray-500 rounded-md px-3 py-2'
+        className='py-2 px-3 rounded-md border border-gray-500'
         onClick={() => router.back()}
       >
         戻る

@@ -16,7 +16,6 @@ type Props = {
 
 export const BlogItem: VFC<Props> = (props) => {
   const { blog } = props;
-  console.log(blog);
 
   // 公開日を日本時間に加工
   const publishedAt = dayjs
@@ -28,8 +27,6 @@ export const BlogItem: VFC<Props> = (props) => {
     .utc(blog.revisedAt)
     .tz('Asia/Tokyo')
     .format('YYYY-MM-DD');
-  console.log(publishedAt);
-  console.log(revisedAt);
 
   return (
     <div className='text-center rounded-lg shadow-md hover:shadow-xl hover:opacity-90'>
@@ -45,11 +42,11 @@ export const BlogItem: VFC<Props> = (props) => {
         </a>
       </Link>
       <div className='text-left'>
-        <div className='text-gray-400 pl-2'>
+        <div className='pl-2 text-gray-400'>
           🗓 {publishedAt} <span className='ml-5'><FontAwesomeIcon icon={faSyncAlt} size='sm' /> {revisedAt}</span>
         </div>
-        <p className='text-gray-400 pl-2'>🏷ポートフォリオ</p>
-        <div className='font-bold p-2'>{blog.title}</div>
+        <p className='pl-2 text-gray-400'>🏷ポートフォリオ</p>
+        <div className='p-2 font-bold'>{blog.title}</div>
       </div>
     </div>
   );
