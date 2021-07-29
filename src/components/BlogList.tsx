@@ -1,11 +1,11 @@
-import { VFC } from 'react';
+import { memo, VFC } from 'react';
 import { BlogItem } from './BlogItem';
 
 type Props = {
   blogs: any;
 };
 
-export const BlogList: VFC<Props> = (props) => {
+export const BlogList: VFC<Props> = memo((props) => {
   const { blogs } = props;
   
   return (
@@ -16,4 +16,4 @@ export const BlogList: VFC<Props> = (props) => {
         })}
     </div>
   );
-};
+});

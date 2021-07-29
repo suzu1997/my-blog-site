@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { VFC } from 'react';
+import { memo, VFC } from 'react';
 import dayjs from 'dayjs';
 import utc from 'dayjs/plugin/utc';
 import timezone from 'dayjs/plugin/timezone';
@@ -14,7 +14,7 @@ type Props = {
   blog: any;
 };
 
-export const BlogItem: VFC<Props> = (props) => {
+export const BlogItem: VFC<Props> = memo((props) => {
   const { blog } = props;
 
   // 公開日を日本時間に加工
@@ -43,11 +43,14 @@ export const BlogItem: VFC<Props> = (props) => {
       </Link>
       <div className='text-left'>
         <div className='pl-2 text-gray-400'>
-          🗓 {publishedAt} <span className='ml-5'><FontAwesomeIcon icon={faSyncAlt} size='sm' /> {revisedAt}</span>
+          🗓 {publishedAt}
+          <span className='ml-5'>
+            <FontAwesomeIcon icon={faSyncAlt} size='sm' /> {revisedAt}
+          </span>
         </div>
         <p className='pl-2 text-gray-400'>🏷ポートフォリオ</p>
         <div className='p-2 font-bold'>{blog.title}</div>
       </div>
     </div>
   );
-};
+});
