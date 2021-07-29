@@ -1,23 +1,28 @@
-import { VFC } from 'react';
+import { memo, VFC } from 'react';
+import { useCategories } from 'src/hooks/useCategories';
 
-const categories = [
-  'プログラミング',
-  'キャリアのこと。',
-  '映画',
-  '旅行',
-  'グルメ',
-];
+export const CategoryItem: VFC = memo(() => {
+  const { data, error, isLoading } = useCategories();
 
-export const CategoryItem: VFC = () => {
+  if (isLoading) {
+    return <div>ローディング中...</div>;
+  }
+  if (error) {
+    return <div className='p-2'>{error.message}</div>;
+  }
+
   return (
     <>
-      {categories.map((category) => {
+      {data.contents.map((content: any) => {
         return (
-          <li key={category} className='p-4 cursor-pointer hover:bg-violet-100 hover:bg-opacity-60'>
-            <a>{category}</a>
+          <li
+            key={content.id}
+            className='p-4 hover:bg-violet-100 hover:bg-opacity-60 cursor-pointer'
+          >
+            <a>{content.category}</a>
           </li>
         );
       })}
     </>
   );
-};
+});
