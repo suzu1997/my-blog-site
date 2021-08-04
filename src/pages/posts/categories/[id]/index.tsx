@@ -7,7 +7,15 @@ type Props = {
 };
 
 const CategoryId: NextPage<Props> = ({ blogs }) => {
-  return <BlogList blogs={blogs.contents} />;
+  return (
+    <>
+      {blogs && blogs.contents.length === 0 ? (
+        <div className='text-lg'>このカテゴリーでの投稿はまだありません🙇‍♀️</div>
+      ) : (
+        <BlogList blogs={blogs.contents} />
+      )}
+    </>
+  );
 };
 
 //idのとりうる値のリストを返す
@@ -23,7 +31,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 //idに基づいて必要なデータを取得
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const blogs = await getPostsByCategories(params?.id);
-  
+
   return {
     props: {
       blogs,
