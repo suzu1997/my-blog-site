@@ -7,6 +7,7 @@ import 'src/styles/globals.css';
 
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { config } from '@fortawesome/fontawesome-svg-core';
+import { Layout } from 'src/components/layout/Layout';
 config.autoAddCss = false; 
 
 const MyApp: NextPage<AppProps> = ({ Component, pageProps }: AppProps) => {
@@ -17,7 +18,9 @@ const MyApp: NextPage<AppProps> = ({ Component, pageProps }: AppProps) => {
         <meta name='description' content='ブログサイトです。' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   );
 };
