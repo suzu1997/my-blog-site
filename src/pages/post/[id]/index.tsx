@@ -1,7 +1,5 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
-import { useRouter } from 'next/dist/client/router';
-import { Header } from 'src/components/layout/Header';
-import { fetcher } from 'src/libs/fetcher';
+import { Post } from 'src/components/Post';
 
 type Props = {
   post: any;
@@ -12,19 +10,8 @@ const PostId: NextPage<Props> = ({ post }) => {
   console.log(post);
 
   return (
-    <div>
-      <Header />
-      <div>ブログの子ページ</div>
-      <div>{router.query.id}</div>
-      <div>{`タイトル:${post.title}`}</div>
-      <p>{post.publishedAt}</p>
-      <div dangerouslySetInnerHTML={{ __html: `${post.body}` }}></div>
-      <button
-        className='py-2 px-3 rounded-md border border-gray-500'
-        onClick={() => router.back()}
-      >
-        戻る
-      </button>
+    <div className='flex-grow'>
+      <Post post={post}/>
     </div>
   );
 };
