@@ -5,7 +5,7 @@ import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 export const Profile: VFC = memo(() => {
   return (
-    <div className='mt-10 md:mt-0 w-10/12 text-center border border-violet-200'>
+    <div className='mt-10 md:mt-0 md:w-10/12 text-center border border-violet-200'>
       <h1 className='p-2 text-lg bg-violet-200 shadow-sm'>プロフィール</h1>
       <div className='p-6'>
         <Image
