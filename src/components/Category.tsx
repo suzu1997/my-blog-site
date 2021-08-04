@@ -3,7 +3,7 @@ import { CategoryItem } from 'src/components/CategoryItem';
 
 export const Category: VFC = memo(() => {
   return (
-    <div className='w-10/12 border border-violet-200'>
+    <div className='w-full md:w-10/12 border border-violet-200'>
       <h1 className='p-2 text-lg text-center bg-violet-200 shadow-sm'>
         カテゴリー
       </h1>

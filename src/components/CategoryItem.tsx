@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { memo, VFC } from 'react';
 import { useCategories } from 'src/hooks/useCategories';
 
@@ -19,7 +20,9 @@ export const CategoryItem: VFC = memo(() => {
             key={content.id}
             className='p-4 hover:bg-violet-100 hover:bg-opacity-60 cursor-pointer'
           >
-            <a>{content.category}</a>
+            <Link href={`/posts/categories/${content.id}`}>
+              <a>{content.category}</a>
+            </Link>
           </li>
         );
       })}
