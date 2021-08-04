@@ -37,7 +37,6 @@ export const BlogItem: VFC<Props> = memo((props) => {
             alt='アイキャッチ画像'
             width={300}
             height={180}
-            className=''
           />
         </a>
       </Link>
@@ -48,8 +47,14 @@ export const BlogItem: VFC<Props> = memo((props) => {
             <FontAwesomeIcon icon={faSyncAlt} size='sm' /> {revisedAt}
           </span>
         </div>
-        <p className='pl-2 text-gray-400'>🏷ポートフォリオ</p>
-        <div className='p-2 font-bold'>{blog.title}</div>
+        <p className='pl-2 text-gray-400'>{`カテゴリー:${blog.category.category}`}</p>
+        <Link href={`/post/${blog.id}`}>
+          <a>
+            <p className='p-2 font-bold hover:text-purple-700'>
+              {blog.title}
+            </p>
+          </a>
+        </Link>
       </div>
     </div>
   );
