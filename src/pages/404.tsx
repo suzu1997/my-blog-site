@@ -3,7 +3,7 @@ import { NextPage } from 'next';
 const Custom404: NextPage = () => {
   return (
     <main>
-      <p>ページがありません。</p>
+      <p>ページがありません🙇‍♀️</p>
     </main>
   );
 };
