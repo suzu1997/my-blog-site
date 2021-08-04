@@ -44,7 +44,6 @@ export const getPostsByCategories = async (
   res: any;
 }> => {
   const posts = await fetcher(`https://suzu-blog.microcms.io/api/v1/blog?filters=category[equals]${id}`);
-  console.log(posts);
   
   return posts;
 };
