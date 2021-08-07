@@ -8,7 +8,7 @@ export const TopImage: VFC = memo(() => {
     <div className={`${router.pathname === '/' ? 'relative w-screen h-80' : 'relative w-screen h-40'}`}>
       <div>
         <Image
-          src='/top2.jpg'
+          src='/top.jpg'
           alt='ルーマニアの街並み'
           layout='fill'
           objectFit='cover'
