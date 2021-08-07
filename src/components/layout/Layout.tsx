@@ -9,7 +9,7 @@ export const Layout: FC = memo((props) => {
   const { children } = props;
 
   return (
-    <div className='flex flex-col items-center p-0 min-h-screen font-serif'>
+    <div className='flex overflow-x-hidden flex-col items-center p-0 max-w-full min-h-screen font-serif'>
       <Header />
       <main className='flex-grow min-h-full'>
         <TopImage />
