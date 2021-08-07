@@ -21,7 +21,7 @@ export const CategoryItem: VFC = memo(() => {
             className='p-4 hover:bg-violet-100 hover:bg-opacity-60 cursor-pointer'
           >
             <Link href={`/posts/categories/${content.id}`}>
-              <a>{content.category}</a>
+              <a className='block'>{content.category}</a>
             </Link>
           </li>
         );
