@@ -34,7 +34,7 @@ export const Profile: VFC = memo(() => {
               <FontAwesomeIcon icon={faGithub} size='lg' />
             </a>
           </div>
-          <p className='text-sm text-gray-500'>
+          <p className='inline-block text-sm text-gray-500 hover:text-gray-900'>
             →
             <a
               href='https://suzu-portfolio.vercel.app'
@@ -47,10 +47,11 @@ export const Profile: VFC = memo(() => {
           </p>
         </div>
         <div className='mt-4'>
-          新卒で旅行会社に入社。10月よりWEBフロントエンドエンジニアに転職します。<br />
+          新卒で旅行会社に入社。添乗員してました✈︎ 10月よりWEBフロントエンドエンジニアに転職します。
+          <br />
           自分用の日記&記録として、まったりと投稿していきます＊
-          <br/>
-          <br/>
+          <br />
+          <br />
           好きなこと : 旅行、カフェ巡り、映画鑑賞、体を動かすこと🌼
         </div>
       </div>
