@@ -28,5 +28,5 @@ module.exports = {
       margin: ['hover', 'focus'],
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 };
