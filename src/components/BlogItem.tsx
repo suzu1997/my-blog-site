@@ -50,7 +50,7 @@ export const BlogItem: VFC<Props> = memo((props) => {
         <p className='pl-2 text-gray-400'>{`カテゴリー:${blog.category.category}`}</p>
         <Link href={`/post/${blog.id}`}>
           <a>
-            <p className='p-2 font-bold hover:text-purple-700'>
+            <p className='inline-block p-2 font-bold hover:text-purple-700'>
               {blog.title}
             </p>
           </a>
