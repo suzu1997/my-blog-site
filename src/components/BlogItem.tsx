@@ -29,33 +29,29 @@ export const BlogItem: VFC<Props> = memo((props) => {
     .format('YYYY-MM-DD');
 
   return (
-    <div className='text-center rounded-lg shadow-md hover:shadow-xl hover:opacity-90'>
-      <Link href={`/post/${blog.id}`}>
-        <a>
+    <Link href={`/post/${blog.id}`}>
+      <a>
+        <div className='text-center rounded-lg shadow-md hover:shadow-xl hover:opacity-90'>
           <Image
             src={blog.image.url}
             alt='アイキャッチ画像'
             width={300}
             height={180}
           />
-        </a>
-      </Link>
-      <div className='text-left'>
-        <div className='pl-2 text-gray-400'>
-          🗓 {publishedAt}
-          <span className='ml-5'>
-            <FontAwesomeIcon icon={faSyncAlt} size='sm' /> {revisedAt}
-          </span>
-        </div>
-        <p className='pl-2 text-gray-400'>{`カテゴリー:${blog.category.category}`}</p>
-        <Link href={`/post/${blog.id}`}>
-          <a>
+          <div className='text-left'>
+            <div className='pl-2 text-gray-400'>
+              🗓 {publishedAt}
+              <span className='ml-5'>
+                <FontAwesomeIcon icon={faSyncAlt} size='sm' /> {revisedAt}
+              </span>
+            </div>
+            <p className='pl-2 text-gray-400'>{`カテゴリー:${blog.category.category}`}</p>
             <p className='inline-block p-2 font-bold hover:text-purple-700'>
               {blog.title}
             </p>
-          </a>
-        </Link>
-      </div>
-    </div>
+          </div>
+        </div>
+      </a>
+    </Link>
   );
 });
