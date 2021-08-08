@@ -13,7 +13,7 @@ export const Layout: FC = memo((props) => {
       <Header />
       <main className='flex-grow min-h-full'>
         <TopImage />
-        <div className='flex flex-col md:flex-row md:justify-between items-center md:items-start my-12 mx-auto md:mx-16 w-3/4 md:w-11/12'>
+        <div className='flex flex-col md:flex-row md:justify-between items-center md:items-start my-12 mx-auto w-3/4 md:w-11/12'>
           {children}
           <SideBar />
         </div>
