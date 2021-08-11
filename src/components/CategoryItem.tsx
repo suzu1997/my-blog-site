@@ -1,12 +1,20 @@
 import Link from 'next/link';
 import { memo, VFC } from 'react';
 import { useCategories } from 'src/hooks/useCategories';
+import { SkeletonLoading } from './SkeletonLoading';
 
 export const CategoryItem: VFC = memo(() => {
   const { data, error, isLoading } = useCategories();
 
   if (isLoading) {
-    return <div>ローディング中...</div>;
+    return (
+      <>
+        <SkeletonLoading />
+        <SkeletonLoading />
+        <SkeletonLoading />
+        <SkeletonLoading />
+      </>
+    );
   }
   if (error) {
     return <div className='p-2'>{error.message}</div>;
