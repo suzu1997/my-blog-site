@@ -29,10 +29,10 @@ export const Post: VFC<Props> = memo((props) => {
 
   return (
     <div className='py-5 px-2 sm:px-10 md:ml-20 rounded-sm shadow-md'>
-      <div className='text-lg sm:text-2xl font-bold border-b border-gray-300'>
+      <div className='pt-2 text-xl sm:text-2xl font-bold border-b border-gray-300'>
         {post.title}
       </div>
-      <div className='pl-2 text-gray-400'>
+      <div className='pt-2 pl-2 text-gray-400'>
         🗓 {publishedAt}
         <span className='ml-5'>
           <FontAwesomeIcon icon={faSyncAlt} size='sm' /> {revisedAt}
