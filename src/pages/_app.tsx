@@ -15,7 +15,7 @@ const MyApp: NextPage<AppProps> = ({ Component, pageProps }: AppProps) => {
     <>
       <Head>
         <title>Suzu&apos;s Diary</title>
-        <meta name='description' content='ブログサイトです。' />
+        <meta name='description' content='新卒で旅行会社に入社。添乗員してました✈︎10月よりWEBフロントエンドエンジニアに転職します。自分用の日記&記録として、まったりと投稿していきます＊' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Layout>
