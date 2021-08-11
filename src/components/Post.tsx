@@ -34,9 +34,11 @@ export const Post: VFC<Props> = memo((props) => {
       </div>
       <div className='pt-2 pl-2 text-gray-400'>
         🗓 {publishedAt}
-        <span className='ml-5'>
-          <FontAwesomeIcon icon={faSyncAlt} size='sm' /> {revisedAt}
-        </span>
+        {publishedAt === revisedAt ? null : (
+          <span className='ml-5'>
+            <FontAwesomeIcon icon={faSyncAlt} size='sm' /> {revisedAt}
+          </span>
+        )}
       </div>
       <div
         className='sm:px-5 mt-8 prose md:prose prose-sm'

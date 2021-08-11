@@ -41,9 +41,6 @@ export const BlogItem: VFC<Props> = memo((props) => {
           <div className='text-left'>
             <div className='pl-2 text-gray-400'>
               🗓 {publishedAt}
-              <span className='ml-5'>
-                <FontAwesomeIcon icon={faSyncAlt} size='sm' /> {revisedAt}
-              </span>
             </div>
             <p className='pl-2 text-gray-400'>{`カテゴリー:${blog.category.category}`}</p>
             <p className='inline-block p-2 font-bold hover:text-purple-700'>
