@@ -1,4 +1,3 @@
-// import Image from 'next/image';
 import { GetStaticProps, NextPage } from 'next';
 
 import { BlogList } from 'src/components/BlogList';
