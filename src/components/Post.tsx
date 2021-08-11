@@ -28,7 +28,7 @@ export const Post: VFC<Props> = memo((props) => {
     .format('YYYY-MM-DD');
 
   return (
-    <div className='py-5 px-2 sm:px-10 md:ml-20'>
+    <div className='py-5 px-2 sm:px-10 md:ml-20 rounded-sm shadow-md'>
       <div className='text-lg sm:text-2xl font-bold border-b border-gray-300'>
         {post.title}
       </div>
