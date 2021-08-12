@@ -28,7 +28,7 @@ export const Post: VFC<Props> = memo((props) => {
     .format('YYYY-MM-DD');
 
   return (
-    <div className='py-5 px-2 sm:px-10 md:ml-20 rounded-sm shadow-md'>
+    <div className='py-5 sm:px-24 md:ml-20 rounded-sm sm:shadow-md'>
       <div className='pt-2 text-xl sm:text-2xl font-bold border-b border-gray-300'>
         {post.title}
       </div>
@@ -41,7 +41,7 @@ export const Post: VFC<Props> = memo((props) => {
         )}
       </div>
       <div
-        className='sm:px-5 mt-8 prose md:prose prose-sm'
+        className='mx-auto mt-8 prose md:prose prose-sm'
         dangerouslySetInnerHTML={{ __html: `${post.body}` }}
       ></div>
       <div className='inline-block mt-10 hover:underline'>
