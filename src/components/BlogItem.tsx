@@ -4,8 +4,6 @@ import { memo, VFC } from 'react';
 import dayjs from 'dayjs';
 import utc from 'dayjs/plugin/utc';
 import timezone from 'dayjs/plugin/timezone';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSyncAlt } from '@fortawesome/free-solid-svg-icons';
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
@@ -20,11 +18,6 @@ export const BlogItem: VFC<Props> = memo((props) => {
   // 公開日を日本時間に加工
   const publishedAt = dayjs
     .utc(blog.publishedAt)
-    .tz('Asia/Tokyo')
-    .format('YYYY-MM-DD');
-  // 更新日を日本時間に加工
-  const revisedAt = dayjs
-    .utc(blog.revisedAt)
     .tz('Asia/Tokyo')
     .format('YYYY-MM-DD');
 
