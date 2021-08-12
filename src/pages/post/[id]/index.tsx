@@ -1,4 +1,5 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
+import Head from 'next/head';
 import { Post } from 'src/components/Post';
 import { getAllPostsIds, getPostData } from 'src/libs/post';
 
@@ -8,9 +9,18 @@ type Props = {
 
 const PostId: NextPage<Props> = ({ post }) => {
   return (
-    <div className='flex-grow'>
-      <Post post={post}/>
-    </div>
+    <>
+      <Head>
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:site' content='@suzu73424970' />
+        <meta property='og:url' content={`https://suzu-diary.vercel.app/post/${post.id}`} />
+        <meta property='og:title' content={post.title} />
+        <meta property='og:image' content={post.image.url} />
+      </Head>
+      <div className='flex-grow'>
+        <Post post={post} />
+      </div>
+    </>
   );
 };
 
