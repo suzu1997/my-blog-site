@@ -15,7 +15,7 @@ export const TopImage: VFC = memo(() => {
           className='opacity-70'
         />
       </div>
-      <h1 className='block absolute bottom-8 left-5 sm:left-20 font-lobster text-5xl md:text-6xl lg:text-7xl font-bold tracking-wide text-purple-700 mix-blend-overlay'>
+      <h1 className='block absolute bottom-8 left-5 sm:left-20 font-lobster text-5xl md:text-6xl lg:text-7xl font-bold tracking-wide text-purple-700 mix-blend-hard-light'>
         Suzu&apos;s diary
       </h1>
     </div>
