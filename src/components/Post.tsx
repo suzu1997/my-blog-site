@@ -41,7 +41,7 @@ export const Post: VFC<Props> = memo((props) => {
         )}
       </div>
       <div
-        className='mx-auto mt-8 prose md:prose prose-sm'
+        className='mx-auto mt-8 prose'
         dangerouslySetInnerHTML={{ __html: `${post.body}` }}
       ></div>
       <div className='inline-block mt-10 hover:underline'>
