@@ -14,7 +14,7 @@ config.autoAddCss = false;
 
 const MyApp: NextPage<AppProps> = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
-  
+
   useEffect(() => {
     // GA_TRACKING_ID が設定されていない場合は、処理終了
     if (!GA_TRACKING_ID) return;
@@ -41,13 +41,12 @@ const MyApp: NextPage<AppProps> = ({ Component, pageProps }: AppProps) => {
             <script
               dangerouslySetInnerHTML={{
                 __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${GA_TRACKING_ID}', {
-              page_path: window.location.pathname,
-            });
-        `,
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${GA_TRACKING_ID}', {
+                  page_path: window.location.pathname,
+                });`,
               }}
             />
           </>
