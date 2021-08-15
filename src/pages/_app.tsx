@@ -1,21 +1,62 @@
-import { AppProps } from 'next/dist/next-server/lib/router/router';
 import Head from 'next/head';
 import { NextPage } from 'next';
-
 import 'tailwindcss/tailwind.css';
 import 'src/styles/globals.css';
 
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import { Layout } from 'src/components/layout/Layout';
-config.autoAddCss = false; 
+import { AppProps } from 'next/dist/shared/lib/router/router';
+import { GA_TRACKING_ID, pageview } from 'src/libs/gtag';
+import { useRouter } from 'next/dist/client/router';
+import { useEffect } from 'react';
+config.autoAddCss = false;
 
 const MyApp: NextPage<AppProps> = ({ Component, pageProps }: AppProps) => {
+  const router = useRouter();
+  
+  useEffect(() => {
+    // GA_TRACKING_ID が設定されていない場合は、処理終了
+    if (!GA_TRACKING_ID) return;
+
+    const handleRouteChange = (url: string) => {
+      pageview(url);
+    };
+    router.events.on('routeChangeComplete', handleRouteChange);
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [router.events]);
+
   return (
     <>
       <Head>
+        {/* // GA_TRACKING_ID が設定されていない場合は、なし */}
+        {GA_TRACKING_ID && (
+          <>
+            <script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+            />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_TRACKING_ID}', {
+              page_path: window.location.pathname,
+            });
+        `,
+              }}
+            />
+          </>
+        )}
         <title>Suzu&apos;s Diary</title>
-        <meta name='description' content='新卒で旅行会社に入社。添乗員してました✈︎10月よりWEBフロントエンドエンジニアに転職します。自分用の日記&記録として、まったりと投稿していきます＊' />
+        <meta
+          name='description'
+          content='新卒で旅行会社に入社。添乗員してました✈︎10月よりWEBフロントエンドエンジニアに転職します。自分用の日記&記録として、まったりと投稿していきます＊'
+        />
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Layout>
