@@ -1,5 +1,8 @@
 export const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID || '';
 
+// IDが取得できない場合を想定する
+export const existsGaId = GA_TRACKING_ID !== '';
+
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
 export const pageview = (path: string): void => {
   if (!GA_TRACKING_ID) return;
