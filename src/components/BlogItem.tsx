@@ -31,10 +31,8 @@ export const BlogItem: VFC<Props> = memo((props) => {
             width={300}
             height={180}
           />
-          <div className='text-left'>
-            <div className='pl-2 text-gray-400'>
-              🗓 {publishedAt}
-            </div>
+          <div className='h-28 text-left'>
+            <div className='pl-2 text-gray-400'>🗓 {publishedAt}</div>
             <p className='pl-2 text-gray-400'>{`カテゴリー:${blog.category.category}`}</p>
             <p className='inline-block p-2 font-bold hover:text-purple-700'>
               {blog.title}
