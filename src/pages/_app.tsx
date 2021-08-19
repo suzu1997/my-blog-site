@@ -37,6 +37,7 @@ const MyApp: NextPage<AppProps> = ({ Component, pageProps }: AppProps) => {
           content='新卒で旅行会社に入社。添乗員してました✈︎10月よりWEBフロントエンドエンジニアに転職します。自分用の日記&記録として、まったりと投稿していきます＊'
         />
         <link rel='icon' href='/favicon.ico' />
+        <script data-ad-client="ca-pub-1287513948192042" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
       </Head>
       <Layout>
         <Component {...pageProps} />
