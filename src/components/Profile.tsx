@@ -15,9 +15,9 @@ export const Profile: VFC = memo(() => {
           height={180}
           className='rounded-full'
         />
+        <div className='mx-auto text-lg'>Suzu</div>
         <div className='text-right'>
           <div className='flex justify-end mb-2'>
-            <div className='mr-12 text-lg'>Suzu</div>
             <div>
               <a
                 href='https://twitter.com/suzu73424970'
