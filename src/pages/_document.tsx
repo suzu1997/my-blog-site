@@ -22,12 +22,17 @@ export default class MyDocument extends Document {
                     function gtag(){dataLayer.push(arguments);}
                     gtag('js', new Date());
                     gtag('config', '${GA_TRACKING_ID}', {
-                    page_path: window.location.pathname,
-                  });`,
+                    page_path: window.location.pathname,});
+                  `,
                 }}
               />
             </>
           )}
+          <script
+            data-ad-client='ca-pub-1287513948192042'
+            async
+            src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
+          />
         </Head>
         <body>
           <Main />
